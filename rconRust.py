@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Created on Sun Jan  5 21:30:03 2020
-
-@author: Elementz
+@author: jsmeele
 """
 
 import asyncio
@@ -54,7 +52,6 @@ class RCONClient:
         await self.__CONNECTION.send(message)
     
     def run(self):
-        # print(self.__LOOP)
         if self.__LOOP.is_running():
             asyncio.gather(self.connect())
         else:
