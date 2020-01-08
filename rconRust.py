@@ -34,10 +34,6 @@ class RCONClient:
     
     async def close(self):
         self.__TASK.cancel()
-        # if not self.__TASK.cancelled():
-        #     self.__TASK.cancel()
-        # else:
-        #     self.__TASK = None
             
         await self.__CONNECTION.close()
         print('Connection with server closed')
